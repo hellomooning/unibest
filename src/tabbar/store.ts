@@ -46,6 +46,7 @@ export function isPageTabbar(path: string) {
 const tabbarStore = reactive({
   curIdx: uni.getStorageSync('app-tabbar-index') || 0,
   prevIdx: uni.getStorageSync('app-tabbar-index') || 0,
+  isCurrentPageTabbar: true,
   setCurIdx(idx: number) {
     this.curIdx = idx
     uni.setStorageSync('app-tabbar-index', idx)
